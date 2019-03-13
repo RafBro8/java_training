@@ -1,0 +1,64 @@
+Static Methods are declared using Static modifier
+Static Methods can't access Instance Methods and Instance Variables directly
+Static Methods are usually used for operations that don't require any data from an Instance
+of the Class (from 'this')
+'this' keyword is the current Instance of a Class
+
+In Static Methods we can't use the this keyword
+Whenever you see a Method that does not use Instance Variables that Method should be
+declared as a Static Method
+Main is a Static Method and it is called by the JVM when it starts an Application
+
+Static Method example:
+
+class Calculator {
+
+     public static void printSum(int a, int b) {
+          System.out.println("sum= " + (a + b));
+     }
+   }
+
+
+public class Main {
+
+      public static void main(String[] args) {
+           Calculator.printSum(5, 10);
+           printHello();   shorter form of Main.printHello();
+      }
+
+      public static void printHello() {
+          System.out.println("Hello");
+      }
+    }
+Static Methods are called as ClassName.methodName(); or methodName(); only if in the same Class
+
+
+
+
+Instance Methods belong to an Instance of a Class
+To use an Instance Method we have to Instantiate the Class first usually by using the 'new' keyword
+Instance Methods can access Instance Methods and Instance Variables directly
+Instance Methods can also access Static Methods and Static Variables directly
+
+Instance Method example:
+
+class Dog {
+
+     public void bark() {
+          System.out.println("woof");
+     }
+   }
+
+
+public class Main{
+
+      public static void main(String[] args) {
+            Dog rex = new Dog();      create instance
+            rex.bark();         call Instance Method
+      }
+    }
+ }
+
+ If not using any Fields or Instance Methods, the Method should be Static Method
+
+
